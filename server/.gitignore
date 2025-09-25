@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Temporary uploads
+temp_uploads/
+
+# Editor / OS files
+*.DS_Store
+*.log
+.idea/
+.vscode/
+
+# Model caches
+models/*/__pycache__/

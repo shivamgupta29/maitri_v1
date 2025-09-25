@@ -1,0 +1,28 @@
+numpy
+opencv-python
+tensorflow
+librosa
+Pillow
+scikit-learn
+ollama
+requests
+fastapi
+pydantic
+python-multipart
+moviepy
+
+# Core LangChain libraries
+langchain
+langchain-community
+langchain-core
+langchain-ollama
+
+# Vector Store
+chromadb
+
+# Document Loading
+langchain-text-splitters
+textloader
+unstructured
+
+openai-whisper

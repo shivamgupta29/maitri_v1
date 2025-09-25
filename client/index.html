@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maitri - Wellness Monitor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="static/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Column: Maitri Assistant -->
+        <div class="card">
+            <div class="card-header">
+                <h2>MAITRI</h2>
+                <p>Mental Wellness Assistant</p>
+            </div>
+            <div class="content-box maitri-box">
+                <!-- Chat log is now initially empty. JS will add the first message. -->
+                <div id="chat-log"></div>
+                <div class="input-area" id="input-area">
+                    <input type="text" id="user-input" placeholder="Tell me how you feel or press the mic to talk">
+                    <button id="mic-button" class="icon-button"><i class="fa-solid fa-microphone"></i></button>
+                    <button id="send-button" class="icon-button"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Wellness Monitor -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Wellness Monitor</h2>
+                <p>Ambient Emotional Stress Detection</p>
+            </div>
+            <div class="content-box monitor-box">
+                <video id="video-feed" class="hidden" autoplay muted playsinline></video>
+                <div id="camera-preview" class="hidden">
+                    <video id="preview-video" autoplay muted playsinline></video>
+                </div>
+                <!-- Audio visualizer is now an empty container. JS will add the bars. -->
+                <div id="audio-visualizer" class="hidden"></div>
+
+                <!-- This single wrapper will hold the dynamic content (initial state or video feed). -->
+                <div id="monitor-state-wrapper"></div>
+
+                <!-- UNIFIED CONTROL BAR -->
+                <div id="monitor-controls-container">
+                    <div id="audio-controls">
+                        <i class="fa-solid fa-microphone"></i>
+                        <label class="switch">
+                            <input type="checkbox" id="audio-toggle-checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <button id="start-stop-button" class="start-button">
+                        <i class="fa-solid fa-play"></i> Start
+                    </button>
+                    <button id="camera-preview-toggle" class="icon-button-outline"><i class="fa-solid fa-camera"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- We'll keep your style.css as is, assuming it exists -->
+    <script src="static/script.js"></script>
+</body>
+
+</html>
